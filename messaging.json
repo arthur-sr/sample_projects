@@ -1,0 +1,16 @@
+{
+    "greeting": {
+        "text": "resources/greeting_text.txt",
+        "photo": "resources/greeting_photo.jpg",
+        "document": "resources/greeting_document.jpg"
+    },
+
+    "admins_message": {
+        "text": "resources/admins_text.txt",
+        "photo": "resources/admins_photo.png",
+        "document": "resources/greeting_photo.jpg"
+    }
+}
+
+
+
