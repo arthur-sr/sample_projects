@@ -16,6 +16,7 @@ class ZooshopHandler:
         Base.metadata.drop_all(engine)
         Base.metadata.create_all(engine)
         self.db_sess = sessionmaker(engine)
+        print('ZooshopHandler initiallzed successfully')
     
     def add_shop(self, shop: dict):
         with self.db_sess() as sess:
