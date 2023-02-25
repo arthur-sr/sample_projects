@@ -8,7 +8,8 @@ from .zooshop_handler import ZooshopHandler
 from .utils import write_log, write_error
 
 
-load_dotenv()
+if not load_dotenv():
+    raise Exception('Failed to load environment')
 
 
 def read_urls(config_path):
