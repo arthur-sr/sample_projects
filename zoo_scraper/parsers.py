@@ -53,18 +53,20 @@ class Zoopage:
 
         shops = []
         for container_html in containers:
-            container = ItemContainer(container_html)
+            try:
+                container = ItemContainer(container_html)
 
-            shops.append({
-                'on_page_order_number': container.get_on_page_order_number(),
-                'shop_name': container.get_shop_name(),
-                'description': container.get_description(),
-                'phone': container.get_phone(),
-                'website': container.get_website(),
-                'address': container.get_address(),
-                'how_to_get': ''
-            })
-        
+                shops.append({
+                    'on_page_order_number': container.get_on_page_order_number(),
+                    'shop_name': container.get_shop_name(),
+                    'description': container.get_description(),
+                    'phone': container.get_phone(),
+                    'website': container.get_website(),
+                    'address': container.get_address(),
+                    'how_to_get': ''
+                })
+            except Exception as e:
+                print(f'Could not parse container. Failed with error:\n{e}')
         return shops
     
 
